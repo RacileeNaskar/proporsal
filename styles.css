@@ -1,0 +1,112 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f9e0e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    flex-direction: column; /* Added for vertical alignment */
+}
+
+.navbar {
+    width: 100%;
+    background-color: #f9e0e6; /* Same color as body background */
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 10; /* Ensures the navbar stays above other elements */
+}
+
+.navbar-text {
+    color: rgba(249, 224, 230, 0.6); /* Transparent text color */
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for better visibility */
+}
+
+.container {
+    background-color: #fff0f5;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 60px; /* Adjust to avoid overlap with fixed navbar */
+}
+
+h1 {
+    color: #d6336c;
+    font-size: 32px;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.love-btn {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#yesButton {
+    background-color: #ff69b4;
+    color: white;
+}
+
+#yesButton:hover {
+    background-color: #ff1493;
+}
+
+#noButton {
+    background-color: #ffc0cb;
+    color: white;
+    position: relative;
+}
+
+.message {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#message h2 {
+    color: #ff69b4;
+    animation: pop-in 0.6s ease-in-out;
+}
+
+.cute-gif {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+@keyframes pop-in {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-text {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+    .container {
+        margin-top: 80px; /* Increase margin to accommodate navbar */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+}
